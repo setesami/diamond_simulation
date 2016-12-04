@@ -25,6 +25,11 @@ git cms-addpkg TotemCondFormats/DataRecord
 git cms-addpkg TotemCondFormats/ProtonTransportFunctions
 git cms-addpkg TotemCondFormats/DataRecord
 git cms-addpkg CondFormats/DataRecord
+git cms-addpkg Configuration/Generator
+git cms-addpkg Configuration/Test
+git cms-addpkg Configuration/TotemOpticsConfiguration
+git cms-addpkg RecoCTPPS/TotemRPLocal
+
 
 scram b -j 14
 
