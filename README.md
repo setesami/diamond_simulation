@@ -19,7 +19,6 @@ git cms-addpkg Geometry/VeryForwardGeometry/python
 git cms-addpkg Geometry/VeryForwardProtonTransport/data
 git cms-addpkg Geometry/VeryForwardRPTopology
 git cms-addpkg SimTotem/RPDigiProducer
-git cms-addpkg CondFormats/DataRecordIOMC/
 git cms-addpkg IOMC/ParticleGuns
 git cms-addpkg IOMC/EventVertexGenerators
 git cms-addpkg TotemCondFormats/BeamOpticsParamsObjects
