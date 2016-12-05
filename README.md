@@ -14,6 +14,7 @@ git cms-addpkg DQM/CTPPS
 git cms-addpkg DataFormats/DetId
 git cms-addpkg DataFormats/PPSDetId
 git cms-addpkg DataFormats/TotemRPDataTypes
+git cms-addpkg Geometry/VeryForwardData
 git cms-addpkg Geometry/VeryForwardGeometry/python
 git cms-addpkg Geometry/VeryForwardProtonTransport/data
 git cms-addpkg Geometry/VeryForwardRPTopology
