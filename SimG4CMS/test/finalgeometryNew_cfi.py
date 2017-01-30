@@ -80,37 +80,7 @@ XMLIdealGeometryESSource = cms.ESSource("XMLIdealGeometryESSource",
         'Geometry/VeryForwardData/data/RP_Stations_Assembly.xml',
         'Geometry/VeryForwardData/data/RP_Sensitive_Dets.xml',
         'Geometry/VeryForwardData/data/RP_Cuts_Per_Region.xml',
-        'Geometry/VeryForwardData/data/RP_Param_Beam_Region.xml',
-
-
-        'Geometry/VeryForwardData/data/CTPPS_Diamond_Materials.xml',
-        'Geometry/VeryForwardData/data/CTPPS_Diamond_Transformations.xml',
-        'Geometry/VeryForwardData/data/CTPPS_Diamond_Parameters.xml',
-        
-        'Geometry/VeryForwardData/data/DiaSeg/Pat1_Str1.xml',
-        'Geometry/VeryForwardData/data/DiaSeg/Pat2_Str1.xml',
-        'Geometry/VeryForwardData/data/DiaSeg/Pat2_Str2.xml',
-        'Geometry/VeryForwardData/data/DiaSeg/Pat3_Str1.xml',
-        'Geometry/VeryForwardData/data/DiaSeg/Pat3_Str2.xml',
-        'Geometry/VeryForwardData/data/DiaSeg/Pat3_Str3.xml',
-        'Geometry/VeryForwardData/data/DiaSeg/Pat3_Str4.xml',
-        'Geometry/VeryForwardData/data/DiaSeg/Pat4_Str1.xml',
-        'Geometry/VeryForwardData/data/DiaSeg/Pat4_Str2.xml',
-        'Geometry/VeryForwardData/data/DiaSeg/Pat4_Str3.xml',
-        'Geometry/VeryForwardData/data/DiaSeg/Pat4_Str4.xml',
-        'Geometry/VeryForwardData/data/DiaSeg/Pat4_Str5.xml',
-        'Geometry/VeryForwardData/data/DiaStAsm/Plane1.xml',
-        'Geometry/VeryForwardData/data/DiaStAsm/Plane2.xml',
-        'Geometry/VeryForwardData/data/DiaStAsm/Plane3.xml',
-        'Geometry/VeryForwardData/data/DiaStAsm/Plane4.xml',
-        
-        'Geometry/VeryForwardData/data/CTPPS_Diamond_Detector_Assembly.xml',
-        'Geometry/VeryForwardData/data/CTPPS_Timing_Horizontal_Pot.xml',
-        'Geometry/VeryForwardData/data/CTPPS_Timing_Positive_Station.xml',
-        'Geometry/VeryForwardData/data/CTPPS_Timing_Negative_Station.xml',
-        'Geometry/VeryForwardData/data/CTPPS_Timing_Stations_Assembly.xml',
-        'Geometry/VeryForwardData/data/CTPPS_Diamond_Sensitive_Dets.xml',
-        
+        'Geometry/VeryForwardData/data/RP_Param_Beam_Region.xml', 
         ),
                                         rootNodeName = cms.string('cms:OCMS')
                                         

@@ -44,7 +44,7 @@ process.maxEvents = cms.untracked.PSet(
 # Configure the output module (save the result in a file)
 process.o1 = cms.OutputModule("PoolOutputModule",
     outputCommands = cms.untracked.vstring('keep *'),
-    fileName = cms.untracked.string('file:ppstiming_version2.root')
+    fileName = cms.untracked.string('file:ppstiming_version1.root')
 )
 process.outpath = cms.EndPath(process.o1)
 
@@ -139,7 +139,7 @@ process.load("finalgeometryNew_cfi")
 
 # position of RPs
 process.XMLIdealGeometryESSource.geomXMLFiles.append("Geometry/VeryForwardData/data/2016_ctpps_15sigma_margin0/RP_Dist_Beam_Cent.xml")
-process.XMLIdealGeometryESSource.geomXMLFiles.append("Geometry/VeryForwardData/data/CTPPS_Diamond_X_Distance.xml")
+#process.XMLIdealGeometryESSource.geomXMLFiles.append("Geometry/VeryForwardData/data/CTPPS_Diamond_X_Distance.xml")
 
 # extended geometries
 process.TotemRPGeometryESModule = cms.ESProducer("TotemRPGeometryESModule",
@@ -232,7 +232,7 @@ process.g4SimHits.PPSSD = cms.PSet(
   Verbosity = cms.untracked.int32(10)
 )
 
-process.g4SimHits.CTPPS_Diamond_SD = cms.PSet(
+process.g4SimHits.CTPPS_diamond_SD = cms.PSet(
   Verbosity = cms.untracked.int32(0)
 )
 
