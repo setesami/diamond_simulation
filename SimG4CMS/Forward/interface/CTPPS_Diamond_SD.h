@@ -17,6 +17,10 @@ November 2016
 #include "SimG4Core/SensitiveDetector/interface/SensitiveTkDetector.h"
 #include "SimG4Core/Notification/interface/BeginOfEvent.h"
 #include "SimG4Core/Notification/interface/EndOfEvent.h"
+
+#include "SimG4CMS/Forward/interface/TotemG4Hit.h"
+#include "SimG4CMS/Forward/interface/TotemG4HitCollection.h"
+#include "SimG4CMS/Forward/interface/TotemVDetectorOrganization.h"
  
 
 #include "SimG4CMS/Forward/interface/TimingMaterialProperties.h"

@@ -9,7 +9,8 @@ process.MessageLogger = cms.Service("MessageLogger",
         'debugs'),
     categories = cms.untracked.vstring('ForwardSim',
         'TotemRP'),
-    debugModules = cms.untracked.vstring('*'),
+   
+  debugModules = cms.untracked.vstring('*'),
     errors = cms.untracked.PSet(
         threshold = cms.untracked.string('ERROR')
     ),
@@ -221,9 +222,9 @@ process.g4SimHits.Totem_RP_SD = cms.PSet(  # HINT: TOTEM specific
     Verbosity=cms.int32(0)
 )
 process.g4SimHits.CastorSD.nonCompensationFactor = cms.double(0.85)
-process.g4SimHits.PPS_Timing_SD = cms.PSet(
-        Verbosity = cms.int32(0)
-    )
+#process.g4SimHits.PPS_Timing_SD = cms.PSet(
+ #       Verbosity = cms.int32(0)
+  # )
 #
 # # Use particle table
 process.load("SimGeneral.HepPDTESSource.pdt_cfi")
@@ -232,8 +233,8 @@ process.g4SimHits.PPSSD = cms.PSet(
   Verbosity = cms.untracked.int32(10)
 )
 
-process.g4SimHits.CTPPS_diamond_SD = cms.PSet(
-  Verbosity = cms.untracked.int32(0)
+process.g4SimHits.CTPPS_Diamond_SD = cms.PSet(
+Verbosity = cms.int32(10)
 )
 
 
@@ -392,7 +393,7 @@ process.mix = cms.EDProducer("MixingModule",
 process.mix.mixObjects.mixSH.input =  cms.VInputTag(  # note that this list needs to be in the same order as the subdets
         #cms.InputTag("g4SimHits","BSCHits"), cms.InputTag("g4SimHits","BCM1FHits"), cms.InputTag("g4SimHits","PLTHits"), cms.InputTag("g4SimHits","FP420SI"),
         cms.InputTag("g4SimHits","CTPPSDiamondHits"), cms.InputTag("g4SimHits","MuonCSCHits"), cms.InputTag("g4SimHits","MuonDTHits"), cms.InputTag("g4SimHits","MuonRPCHits"),
-      #  cms.InputTag("g4SimHits","TotemHitsRP"), cms.InputTag("g4SimHits","PPSTrackerHits"),
+        cms.InputTag("g4SimHits","TotemHitsRP"), cms.InputTag("g4SimHits","PPSTrackerHits"),
         cms.InputTag("g4SimHits","TrackerHitsPixelBarrelHighTof"), cms.InputTag("g4SimHits","TrackerHitsPixelBarrelLowTof"),
         cms.InputTag("g4SimHits","TrackerHitsPixelEndcapHighTof"), cms.InputTag("g4SimHits","TrackerHitsPixelEndcapLowTof"),
 	cms.InputTag("g4SimHits","TrackerHitsTECHighTof"), cms.InputTag("g4SimHits","TrackerHitsTECLowTof"), cms.InputTag("g4SimHits","TrackerHitsTIBHighTof"),
@@ -408,8 +409,8 @@ process.mix.mixObjects.mixSH.subdets = cms.vstring(
         'MuonCSCHits',
         'MuonDTHits',
         'MuonRPCHits',
-    #    'TotemHitsRP',
-     #   'PPSTrackerHits',
+       'TotemHitsRP',
+        'PPSTrackerHits',
         'TrackerHitsPixelBarrelHighTof',
         'TrackerHitsPixelBarrelLowTof',
         'TrackerHitsPixelEndcapHighTof',
@@ -426,8 +427,8 @@ process.mix.mixObjects.mixSH.subdets = cms.vstring(
 process.mix.mixObjects.mixSH.crossingFrames = cms.untracked.vstring('MuonCSCHits',
 'MuonDTHits',
 'MuonRPCHits',
-#'TotemHitsRP',
-#'PPSTrackerHits',
+'TotemHitsRP',
+'PPSTrackerHits',
 'CTPPSDiamondHits')
 
 
@@ -460,7 +461,7 @@ process.totemRPClusterProducer.tagDigi = cms.InputTag("RPSiDetDigitizer")
 process.dump = cms.EDAnalyzer("EventContentAnalyzer")
 #
 process.p1 = cms.Path(
-	process.generator
+       process.generator
 #*process.VtxSmeared
 	*process.SmearingGenerator
 	*process.g4SimHits

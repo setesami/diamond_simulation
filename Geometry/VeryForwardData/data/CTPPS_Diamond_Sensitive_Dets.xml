@@ -7,6 +7,9 @@
            <!--  <PartSelector path="//Pat.*_Str.*:Diamond"/>-->
          
            <PartSelector path="//CTPPS_Diamond_Pattern.*_Segment.*:CTPPS_Diamond_Segment"/>
+           <PartSelector path="//CTPPS_Timing_Positive_Station:CTPPS_Timing_Positive_Station"/>
+           <PartSelector path="//CTPPS_Timing_Negative_Station:CTPPS_Timing_Negative_Station"/>
+
 
       <!--   <PartSelector path="//PPS_Timing_Box_.*:BoxOFlbar"/>-->   
           <Parameter name="SensitiveDetector" value="CTPPSDiamondSensitiveDetector" eval="false"/>

@@ -108,16 +108,18 @@ TotemSD::~TotemSD() {
 }
 
 G4bool TotemSD::ProcessHits(G4Step * aStep, G4TouchableHistory * )
-{
+{// std::cout<<"Step"<<aStep<<std::endl;
   if (aStep == NULL)
+   
   {
+      // std::cout<<"There is no hit to process"<<std::endl;
   	return true;
   }
   else
   {
     GetStepInfo(aStep);
       CreateNewHit();
-      //LogDebug("TotemRP")<<"New hit created"<<std::endl;
+  //   std::cout<<"New hit created"<<std::endl;
 	    return true;
 	}
 }
@@ -337,7 +339,7 @@ void TotemSD::CreateNewHit()
   StoreHit(currentHit);
 // LogDebug("TotemRP") << "STORED HIT IN: " << unitID << std::endl;
 }
- 
+ /*
 G4ThreeVector TotemSD::PosizioEvo(const G4ThreeVector& Pos, double vx, double vy,
 				  double vz, double pabs, int& accettanza) {
   accettanza=0;
@@ -408,7 +410,7 @@ G4ThreeVector TotemSD::PosizioEvo(const G4ThreeVector& Pos, double vx, double vy
       }
     }
     
-  }
+  }*/
 /*
   LogDebug("ForwardSim") << "\n"
 			 << "ACCETTANZA: "<<accettanza << "\n" 
@@ -424,8 +426,8 @@ G4ThreeVector TotemSD::PosizioEvo(const G4ThreeVector& Pos, double vx, double vy
 			 << vz << "\n"
 */
 // --------------
-  return PosEvo;
-}
+ // return PosEvo;
+//}
 
 void TotemSD::StoreHit(TotemG4Hit* hit)
 {
